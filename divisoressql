@@ -1,0 +1,16 @@
+DECLARE
+   numero number := &numero;
+   indice number := 0;
+BEGIN
+    IF numero > 0 then
+        while indice <= numero loop
+            IF  numero mod indice = 0 THEN
+                DBMS_OUTPUT.PUT_LINE(indice);
+            END IF;
+            indice := indice + 1;
+        END LOOP;
+    END IF;
+END;
+
+
+

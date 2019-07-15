@@ -1,0 +1,21 @@
+ -- Escriba un programa que pida dos números enteros y escriba qué números son pares 
+ -- y cuáles impares desde el primero hasta el segundo.
+DECLARE
+   indice number := 0;
+   numero number := &numero1;
+   numero2 number := &numero2;
+   aux number;
+BEGIN
+    IF numero >numero2 then
+        aux := numero2;
+        numero2 := numero;
+        numero := aux;
+    END IF;
+    FOR indice IN numero..numero2 LOOP
+        if indice mod 2 = 0 then
+          DBMS_OUTPUT.PUT_LINE(indice || 'PAR');
+        ELSE
+          DBMS_OUTPUT.PUT_LINE(indice || 'IMPAR');
+        end if;
+    END LOOP;
+END;
