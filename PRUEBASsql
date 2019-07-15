@@ -1,0 +1,9 @@
+DECLARE
+    tabla_multiplicar NUMBER :=&numero;
+    i number :=1;
+BEGIN
+    WHILE i<10 LOOP
+        DBMS_OUTPUT.PUT_LINE(i * tabla_multiplicar); 
+        i:=i +1;
+    END LOOP;
+END;
