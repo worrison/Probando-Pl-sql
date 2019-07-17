@@ -1,0 +1,10 @@
+CREATE OR REPLACE PROCEDURE  CLG (palabra varchar2) IS
+
+BEGIN
+        DBMS_OUTPUT.PUT_LINE(palabra);
+END;
+/
+
+BEGIN
+    CLG(3);
+END;
